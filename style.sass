@@ -1,0 +1,44 @@
+/* esto es variable */
+$fuente-sans-serif: sans-serif
+$color-boton: #00bb00
+$colorbackground: #aaaaaa
+
+/* esto es funcion */
+@function color-hover($color) 
+    $r1: red($color)
+    $g1: green($color)
+    $b1: blue($color)
+    $r: if($r1*2 > 255, 255, $r1*2)
+    $g: if($g1*2 > 255, 255, $g1*2)
+    $b: if($b1*2 > 255, 255, $b1*2)
+    @return rgb($r, $g, $b)
+
+/* esto es mixin */
+@mixin box-shadow($x, $y, $blur) 
+    box-shadow: $x $y $blur rgba(0, 0, 0, 0.2)
+
+
+body 
+    font-family: $fuente-sans-serif
+    background-color: linear-gradient(to bottom, red, green)
+
+
+input 
+    @include box-shadow(5px, 5px, 4px)
+
+
+.buttons 
+    background: $color-boton
+    &:hover
+        background: color-hover($color-boton) 
+
+
+section
+    background: $colorbackground
+    display: flex
+    flex-direction: column
+
+    h5
+        background: #fff
+
+    

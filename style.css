@@ -1,0 +1,29 @@
+/* esto es variable */
+/* esto es funcion */
+/* esto es mixin */
+body {
+  font-family: sans-serif;
+  background-color: linear-gradient(to bottom, red, green);
+}
+
+input {
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+  background: #00bb00;
+}
+.buttons:hover {
+  background: rgb(0, 255, 0);
+}
+
+section {
+  background: #aaaaaa;
+  display: flex;
+  flex-direction: column;
+}
+section h5 {
+  background: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
